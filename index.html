@@ -1,0 +1,148 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makibul's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h3>Makibul</h3>
+        <button id="menu-btn" onclick="toggleMenu()">menu</button>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li style="display: none;"><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <div id="mobile-menu" class="hidden">
+        <button id="close-btn" onclick="toggleMenu()">close</button>
+        <ul>
+            <li onclick="toggleMenu()"><a href="#about">About</a></li>
+            <li onclick="toggleMenu()" style="display: none;"><a href="#projects">Projects</a></li>
+            <li onclick="toggleMenu()"><a href="#education">Education</a></li>
+            <li onclick="toggleMenu()"><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <section id="hero">
+        <div class="hero-left">
+            <h2>Hi, I'm</h2>
+            <h1>Makibul Islam</h1>
+            <p>Welcome to my portfolio!</p>
+        </div>
+        <div class="hero-right">
+            <img src="p.jpg" alt="">
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm a web developer and a quick learner. When I'm not doing my academic work, I enjoy programming and
+            exploring new technologies. I have a solid foundation in the core tech stack which are:
+        </p>
+        <ul class="tech-stack">
+            <li><img src="/icons/html.png" alt="">HTML</li>
+            <li><img src="/icons/css.png" alt="">CSS</li>
+            <li><img src="/icons/c.png" alt="">C</li>
+            <li><img src="/icons/cpp.png" alt="">C++</li>
+            <li><img src="/icons/java.png" alt="">Java</li>
+            <li><img src="/icons/py.png" alt="">Python</li>
+        </ul>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <div class="education-list">
+            <div class="education">
+                <h3 class="college-name">Dhemaji Engineering College, Dhemaji</h3>
+                <p class="course">B.Tech CSE 2024-28</p>
+                <span class="score">SGPA: 6.9</span>
+            </div>
+            <div class="education">
+                <h3 class="college-name">Ajmal Super 40, Hojai, Assam</h3>
+                <p class="course">Higher Secondary Education</p>
+                <span class="score">Score: 72%</span>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Declaration</h2>
+        <blockquote>I hereby declare that the information provided in this portfolio is true to the best of my knowledge
+            and
+            belief.</blockquote>
+        <p>Place: Dhemaji, Assam
+            <br>
+            Date: 2nd March, 2026
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <ul>
+            <li><a href="mailto:hello@makibul.com">Email (hello@makibul.com)</a></li>
+            <li><a href="https://gitbub.com/devMakibul">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/makibul">LinkedIn</a></li>
+        </ul>
+    </section>
+
+    <section id="projects" style="display: none;">
+        <h2>Projects</h2>
+        <p>Here are some of my favorite projects I've made.</p>
+        <div class="project-list">
+            <div class="project">
+                <div class="thumbnail">
+                    <img src="thumb.png" alt="">
+                </div>
+                <div class="info">
+                    <h3>Project 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio repellendus tenetur suscipit! Vero
+                        debitis, corrupti molestias vitae unde illum recusandae.</p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="thumbnail">
+                    <img src="thumb.png" alt="">
+                </div>
+                <div class="info">
+                    <h3>Project 2</h3>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi ea quia, possimus praesentium
+                        dicta dignissimos aliquam placeat sequi soluta, alias repudiandae quas ipsa vitae ipsum?</p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="thumbnail">
+                    <img src="thumb.png" alt="">
+                </div>
+                <div class="info">
+                    <h3>Project 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam nihil blanditiis nam praesentium
+                        beatae? Sed!</p>
+                </div>
+
+            </div>
+            <div class="project">
+                <div class="thumbnail">
+                    <img src="thumb.png" alt="">
+                </div>
+                <div class="info">
+                    <h3>Project 4</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo delectus minima voluptatum
+                        molestias libero voluptates fugiat sunt.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+
+</html>
