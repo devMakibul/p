@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -5,23 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Makibul's Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <header>
         <h3>Makibul</h3>
-        <button id="menu-btn" onclick="toggleMenu()">menu</button>
         <ul>
             <li><a href="#about">About</a></li>
             <li style="display: none;"><a href="#projects">Projects</a></li>
             <li><a href="#education">Education</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="header-actions">
+            <button id="theme-btn" onclick="toggleTheme()" aria-label="Toggle Theme">
+                <span id="moon-icon">🌙</span>
+                <span id="sun-icon" style="display: none;">☀️</span>
+            </button>
+            <button id="menu-btn" onclick="toggleMenu()">☰</button>
+        </div>
     </header>
 
     <div id="mobile-menu" class="hidden">
-        <button id="close-btn" onclick="toggleMenu()">close</button>
+        <button id="close-btn" onclick="toggleMenu()">✖</button>
         <ul>
             <li onclick="toggleMenu()"><a href="#about">About</a></li>
             <li onclick="toggleMenu()" style="display: none;"><a href="#projects">Projects</a></li>
@@ -32,65 +42,99 @@
 
     <section id="hero">
         <div class="hero-left">
-            <h2>Hi, I'm</h2>
-            <h1>Makibul Islam</h1>
+            <h2 style="margin-bottom: 0;">Hi, I'm</h2>
+            <h1>Makibul</h1>
             <p>Welcome to my portfolio!</p>
         </div>
         <div class="hero-right">
-            <img src="p.webp" alt="Makibul Profile Pic">
+            <img src="p.webp" alt="">
         </div>
     </section>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I'm a web developer and a quick learner. When I'm not doing my academic work, I enjoy programming and
-            exploring new technologies. I have a solid foundation in the core tech stack which are:
-        </p>
-        <ul class="tech-stack">
-            <li><img src="/p/icons/html.png" alt="">HTML</li>
-            <li><img src="/p/icons/css.png" alt="">CSS</li>
-            <li><img src="/p/icons/c.png" alt="">C</li>
-            <li><img src="/p/icons/cpp.png" alt="">C++</li>
-            <li><img src="/p/icons/java.png" alt="">Java</li>
-            <li><img src="/p/icons/py.png" alt="">Python</li>
-        </ul>
-    </section>
+    <div class="grid">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I'm a web developer and a quick learner. When I'm not doing my academic work, I enjoy programming and
+                exploring new technologies. I have a solid foundation in the core tech stack which are:
+            </p>
+            <ul class="tech-stack">
+                <li><img src="/icons/html.png" alt="">HTML</li>
+                <li><img src="/icons/css.png" alt="">CSS</li>
+                <li><img src="/icons/c.png" alt="">C</li>
+                <li><img src="/icons/cpp.png" alt="">C++</li>
+                <li><img src="/icons/java.png" alt="">Java</li>
+                <li><img src="/icons/py.png" alt="">Python</li>
+            </ul>
+        </section>
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="education-list">
-            <div class="education">
-                <h3 class="college-name">Dhemaji Engineering College, Dhemaji</h3>
-                <p class="course">B.Tech CSE 2024-28</p>
-                <span class="score">SGPA: 6.9</span>
+        <section id="bio-data">
+            <table>
+                <tr>
+                    <td>Full Name</td>
+                    <td>Makibul Islam</td>
+                </tr>
+                <tr>
+                    <td>Date of Birth</td>
+                    <td>12/03/2006</td>
+                </tr>
+                <tr>
+                    <td>Nationality</td>
+                    <td>Indian</td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>Male</td>
+                </tr>
+                <tr>
+                    <td>Languages Known</td>
+                    <td>English, Hindi, Assamese, Bengali</td>
+                </tr>
+                <tr>
+                    <td>Hobbies</td>
+                    <td>Coding, Reading, Travelling</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-list">
+                <div class="education">
+                    <h3 class="college-name">Dhemaji Engineering College, Dhemaji</h3>
+                    <p class="course">B.Tech CSE 2024-28</p>
+                    <span class="score">SGPA: 6.9</span>
+                </div>
+                <div class="education">
+                    <h3 class="college-name">Ajmal Super 40, Hojai, Assam</h3>
+                    <p class="course">Higher Secondary Education</p>
+                    <span class="score">Score: 72%</span>
+                </div>
             </div>
-            <div class="education">
-                <h3 class="college-name">Ajmal Super 40, Hojai, Assam</h3>
-                <p class="course">Higher Secondary Education</p>
-                <span class="score">Score: 72%</span>
-            </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
-    <section>
-        <h2>Declaration</h2>
-        <blockquote>I hereby declare that the information provided in this portfolio is true to the best of my knowledge
-            and
-            belief.</blockquote>
-        <p>Place: Dhemaji, Assam
-            <br>
-            Date: 2nd March, 2026
-        </p>
-    </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <ul>
-            <li><a href="mailto:hello@makibul.com">Email (hello@makibul.com)</a></li>
-            <li><a href="https://gitbub.com/devMakibul">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/makibul">LinkedIn</a></li>
-        </ul>
-    </section>
+    <div class="grid-2">
+        <section id="declaration">
+            <h2>Declaration</h2>
+            <blockquote>I hereby declare that the information provided in this portfolio is true to the best of my
+                knowledge and belief.</blockquote>
+            <p>Place: Dhemaji, Assam
+                <br>
+                Date: 2nd March, 2026
+            </p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li><span>Email:</span><a href="mailto:hello@makibul.com">hello@makibul.com</a></li>
+                <li><span>GitHub:</span><a href="https://gitbub.com/devMakibul">devMakibul</a></li>
+                <li><span>LinkedIn:</span><a href="https://linkedin.com/in/makibul">makibul</a></li>
+            </ul>
+        </section>
+    </div>
+
 
     <section id="projects" style="display: none;">
         <h2>Projects</h2>
@@ -140,11 +184,12 @@
         </div>
     </section>
 
+    <footer>
+        <p>&copy; 2026 Makibul. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
 
 
-
 </html>
-
